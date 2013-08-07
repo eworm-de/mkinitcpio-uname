@@ -1,6 +1,6 @@
 #!/bin/sh
 
 run_earlyhook() {
-	echo "Booting $(uname -srm)."
+	echo " Booting $(uname -srm)."
 	echo
 }
