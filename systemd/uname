@@ -1,0 +1,4 @@
+#!/bin/sh
+
+echo " Booting $(uname -srm)."
+echo

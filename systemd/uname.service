@@ -1,0 +1,10 @@
+[Unit]
+Description=uname
+DefaultDependencies=no
+Before=sysinit.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+StandardOutput=tty
+ExecStart=/usr/lib/systemd/scripts/uname
