@@ -2,7 +2,7 @@
 
 build() {
 	add_systemd_unit uname.service
-	add_symlink "/usr/lib/systemd/sysinit.target.wants/uname.service" "../uname.service"
+	add_symlink "/usr/lib/systemd/system/sysinit.target.wants/uname.service" "../uname.service"
 	# busybox provides uname, so we do not add it
 }
 
