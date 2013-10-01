@@ -2,6 +2,7 @@
 Description=uname
 DefaultDependencies=no
 Before=sysinit.target
+After=archlogo.service
 
 [Service]
 Type=oneshot
