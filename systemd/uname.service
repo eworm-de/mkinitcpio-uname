@@ -1,7 +1,7 @@
 [Unit]
 Description=uname
 DefaultDependencies=no
-Before=sysinit.target
+Before=sysinit.target systemd-ask-password-console.service
 After=archlogo.service
 
 [Service]
