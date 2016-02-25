@@ -2,11 +2,14 @@
 
 build() {
 	if add_systemd_unit uname.service 2>/dev/null; then
+		# busybox provides uname, but the base hook is not prerequisite
+		# for a systemd-enable initramfs - so add uname
+		add_binary uname
+
 		add_symlink "/usr/lib/systemd/system/sysinit.target.wants/uname.service" "../uname.service"
 	else
 		add_runscript
 	fi
-	# busybox provides uname, so we do not add it
 }
 
 help() {
