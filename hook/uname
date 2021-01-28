@@ -1,6 +1,10 @@
 #!/bin/sh
 
-run_earlyhook() {
-	echo " Booting $(uname -srm)."
+run_latehook() {
+	if [ -s /new_root/version ]; then
+		echo " Booting $(cat /new_root/version) with $(uname -srm)."
+	else
+		echo " Booting $(uname -srm)."
+	fi
 	echo
 }
