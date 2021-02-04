@@ -1,7 +1,9 @@
 #!/bin/sh
 
 build() {
-	if add_systemd_unit uname.service 2>/dev/null; then
+	if command -v add_systemd_unit >/dev/null; then
+		add_systemd_unit "uname.service"
+
 		# busybox provides uname, but the base hook is not prerequisite
 		# for a systemd-enable initramfs - so add uname
 		add_binary uname
