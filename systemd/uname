@@ -1,4 +1,4 @@
 #!/bin/sh
 
-echo " Booting $(uname -srm)."
+echo " Booting [1;37m$(uname -srm)[0m."
 echo

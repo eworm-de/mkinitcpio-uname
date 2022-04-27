@@ -2,9 +2,9 @@
 
 run_latehook() {
 	if [ -s /new_root/version ]; then
-		echo " Booting $(cat /new_root/version) with $(uname -srm)."
+		echo " Booting [1;37m$(cat /new_root/version)[0m with [1;37m$(uname -srm)[0m."
 	else
-		echo " Booting $(uname -srm)."
+		echo " Booting [1;37m$(uname -srm)[0m."
 	fi
 	echo
 }
