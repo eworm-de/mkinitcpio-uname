@@ -1,6 +1,6 @@
 # Makefile for mkinitcpio-uname
 
-VERSION=0.2.1
+VERSION=0.2.2
 
 all:
 	@echo "Just run make install..."
